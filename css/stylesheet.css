@@ -9,53 +9,45 @@ html {
   letter-spacing: 1px;
 }
 
-ul, li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #2d3133;
-  font-size: 14px;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-}
-
-input {
-  background-color: transparent;
-  outline-width: 0;
-}
-
-form input[type="submit"] {
-  border: none;
-  cursor: pointer;
-}
-
 /* 共通レイアウト ================================ */
 body {
   color: #2d3133;
+  /*background-color: #3ecdc6;*/
+  margin: 10px 20px;
+  /*min-height: 1vh;*/
+}
+
+.box {
+	float: left;
+    margin: 0 20px;
+    padding: 0 10px;
+    width: 200px;
+}
+
+.boxContainer {
+  /*border: solid #008080;*/
   background-color: #3ecdc6;
-  margin: 0;
-  min-height: 1vh;
+  padding: 10px 20px;
+  width: 760px;
+  overflow: hidden;
 }
 
-.main {
-  position: absolute;
-  top: 64px;
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  background-color: #f5f8fa;
+/* clearfix */
+.boxContainer:before,
+.boxContainer:after {
+    content: "";
+    display: table;
 }
 
-.container {
-  max-width: 600px;
-  margin: 60px auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  clear: both;
+.boxContainer:after {
+    clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.boxContainer {
+    zoom: 1;
+}
+
+.hidden {
+    display: none;
 }
