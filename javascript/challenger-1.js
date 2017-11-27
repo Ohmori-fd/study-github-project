@@ -28,6 +28,7 @@ function fizzbuzz_1(){
         result += i+"\n"
       }
     }
+    result += "Finish"
     /* ==============================ここまでコード実装*/
 
     //処理の結果（XXX）をtextareaの値に設定
