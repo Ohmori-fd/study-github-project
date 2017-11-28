@@ -1,4 +1,4 @@
-function fizzbuzz_1(){
+﻿function fizzbuzz_1(){
 
     //チャレンジャー１さんのtextareaを取得
     var elem = document.getElementById("code-result-1");
@@ -13,9 +13,30 @@ function fizzbuzz_1(){
     //　・FizzBuzz出力処理の最終行は"Finish"と出力する
 
     /* ここからコード実装==============================*/
+    var resultValue = "";
 
+    for (var i = 1; i <= 100; i++) {
+
+        var tmpValue = "";
+
+        if (i % 3 == 0) {
+            tmpValue += "Fizz";
+        }
+
+        if (i % 5 == 0) {
+            tmpValue += "Buzz";
+        }
+
+        if (tmpValue == "") {
+            tmpValue = i;
+        }
+
+        resultValue += tmpValue + "\n";
+
+    }
+    resultValue += "Finish";
     /* ==============================ここまでコード実装*/
 
     //処理の結果（XXX）をtextareaの値に設定
-    elem.value = XXX;
+    elem.value = resultValue;
 }
