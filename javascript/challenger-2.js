@@ -13,9 +13,24 @@ function fizzbuzz_2(){
     //　・FizzBuzz出力処理の最終行は"Finish"と出力する
 
     /* ここからコード実装==============================*/
+    
+    var str = "" ;
+
+	for ( var i = 1 ; i <= 100 ; i++ ) {
+		if ( ((i % 3) == 0) && ((i % 5) == 0) ) {
+			str += "FizzBuzz" + "\n"; 
+		} else if ((i % 3) == 0) {
+			str += "Fizz" + "\n"; 
+		} else if ((i % 5) == 0) {
+			str += "Buzz" + "\n"; 
+		} else {
+			str += i + "\n" ; 
+		}
+	}
+	str += "Finish" ; 
 
     /* ==============================ここまでコード実装*/
 
     //処理の結果（XXX）をtextareaの値に設定
-    elem.value = XXXX;
+    elem.value = str ;
 }
